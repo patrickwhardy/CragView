@@ -41,6 +41,10 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'mocha'
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do

@@ -52,24 +52,19 @@
         1,
         1,
         null,
+        1,
         null,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
         null,
+        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
         1,
         null,
         1,
@@ -77,9 +72,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        1,
         null,
         null,
         null,
@@ -271,6 +263,16 @@
         null,
         null
       ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/users.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/config/routes.rb": [
         1,
         1,
@@ -387,6 +389,6 @@
         null
       ]
     },
-    "timestamp": 1465418512
+    "timestamp": 1465425425
   }
 }
