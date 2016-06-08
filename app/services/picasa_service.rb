@@ -15,6 +15,7 @@ class PicasaService
   end
 
   def get_album_data(user_id, album_id)
-    @connection.get("user/#{user_id}/albumid/#{album_id}")
+    response = Hash.from_xml(@connection.get("#{user_id}/albumid/#{album_id}").body)
+    response["feed"]["entry"]
   end
 end

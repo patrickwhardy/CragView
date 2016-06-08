@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-07T23:01:55-06:00">2016-06-07T23:01:55-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-08T14:41:52-06:00">2016-06-08T14:41:52-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">93.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.08
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>20</b> files in total.
-    <b>82</b> relevant lines. 
-    <span class="green"><b>82</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>23</b> files in total.
+    <b>100</b> relevant lines. 
+    <span class="green"><b>93</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -81,11 +81,21 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#c8b473d9b64f5e66854d5766cd9b55cede37c112" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="red strong">22.22 %</td>
+        <td>12</td>
+        <td>9</td>
+        <td>2</td>
+        <td>7</td>
+        <td>0.2</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#750b15a2eeb272ba0aa1b1d04dc33f2b73bbee18" class="src_link" title="app/services/picasa_service.rb">app/services/picasa_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>11</td>
-        <td>11</td>
+        <td>21</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
         <td>1.6</td>
       </tr>
@@ -231,6 +241,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#d14a01ab7ec799ce5fba10be1a451d76d02c5b9d" class="src_link" title="spec/features/user_logs_in_spec.rb">spec/features/user_logs_in_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#90257eb843aa426a930019bc43d091803c4436e6" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>58</td>
@@ -243,9 +263,19 @@
       <tr>
         <td class="strong"><a href="#1f75d39a8e736126858c6ae8f176ddf00d7c3e74" class="src_link" title="spec/services/picasa_service_spec.rb">spec/services/picasa_service_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>18</td>
-        <td>18</td>
+        <td>31</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#677f7ec846aa3f7ee1b6f511de4e391e528c58f1" class="src_link" title="spec/user_spec.rb">spec/user_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>52</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -356,13 +386,103 @@
   </pre>
 </div>
       
+        <div class="source_table" id="c8b473d9b64f5e66854d5766cd9b55cede37c112">
+  <div class="header">
+    <h3>app/models/user.rb</h3>
+    <h4><span class="red">22.22 %</span> covered</h4>
+    <div>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class User &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.from_omniauth(auth)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">    where(uid: auth[:uid]).first_or_create do |user|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">      user.uid = auth.uid</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">      user.provider = auth.provider</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">      user.name = auth.info.name</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">      user.oauth_token = auth.credentials.token</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">      user.oauth_expires_at = Time.at(auth.credentials.expires_at)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">      user.profile_image = auth.info.image</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="750b15a2eeb272ba0aa1b1d04dc33f2b73bbee18">
   <div class="header">
     <h3>app/services/picasa_service.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -475,16 +595,22 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    @connection.get(&quot;user/#{user_id}/albumid/#{album_id}&quot;)</code>
+          <code class="ruby">    response = Hash.from_xml(@connection.get(&quot;#{user_id}/albumid/#{album_id}&quot;).body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    response[&quot;feed&quot;][&quot;entry&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -1664,6 +1790,60 @@
   </pre>
 </div>
       
+        <div class="source_table" id="d14a01ab7ec799ce5fba10be1a451d76d02c5b9d">
+  <div class="header">
+    <h3>spec/features/user_logs_in_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;spec_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"># RSpec.feature &quot;User can log in&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">#   scenario &quot;They log in with google&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">#     user = create(:user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"># end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="90257eb843aa426a930019bc43d091803c4436e6">
   <div class="header">
     <h3>spec/rails_helper.rb</h3>
@@ -2035,8 +2215,8 @@
     <h3>spec/services/picasa_service_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2065,7 +2245,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    user_id = &quot;109924137147373805722&quot; #my uid returned from OAuth</code>
+          <code class="ruby">    user_id = &quot;109924137147373805722&quot; #uid for patrickwhardy returned from OAuth</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -2197,19 +2377,367 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">    binding.pry</code>
+          <code class="ruby">    expect(album_data.class).to eq(Array)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(album_data.first.class).to eq(Hash)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(album_data.first[&quot;where&quot;]).to eq({&quot;Point&quot;=&gt;{&quot;pos&quot;=&gt;&quot;39.7319304 -105.0271554&quot;}})</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(album_data.first[&quot;content&quot;][&quot;src&quot;]).to eq(&quot;https://lh3.googleusercontent.com/-3OLUYCnhvYk/V1IGvaXfBmI/AAAAAAAAAGg/VDXpfOXvHwsXdgByCYmVpiF_eqreLLlvwCHM/2016-06-03.jpg&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="677f7ec846aa3f7ee1b6f511de4e391e528c58f1">
+  <div class="header">
+    <h3>spec/user_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe User, type: :model do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;from_omniauth&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    auth_info = {&quot;provider&quot;=&gt;&quot;google_oauth2&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">     &quot;uid&quot;=&gt;&quot;109924137147373805722&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">     &quot;info&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">      {&quot;name&quot;=&gt;&quot;Patrick Hardy&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">       &quot;email&quot;=&gt;&quot;patrickwhardy@gmail.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">       &quot;first_name&quot;=&gt;&quot;Patrick&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">       &quot;last_name&quot;=&gt;&quot;Hardy&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">       &quot;image&quot;=&gt;&quot;https://lh3.googleusercontent.com/-877gHIubnP0/AAAAAAAAAAI/AAAAAAAAABY/KonHIUOAUVo/photo.jpg&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">       &quot;urls&quot;=&gt;{&quot;Google&quot;=&gt;&quot;https://plus.google.com/109924137147373805722&quot;}},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">     &quot;credentials&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">      {&quot;token&quot;=&gt;&quot;ya29.CjD7AmhbCYIoaXU7JZ6uRsTymczbrk2yqblV4Ga8jROOoXsHbhrEJdeAf3plXcpihdw&quot;, &quot;expires_at&quot;=&gt;1465411628, &quot;expires&quot;=&gt;true},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">     &quot;extra&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">      {&quot;id_token&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">        &quot;eyJhbGciOiJSUzI1NiIsImtpZCI6ImVkZDg1MjBmYmYyZDBkYWYyMWU1YjcwNTVlZWQzYzJmZTA0ZjE3NWEifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXRfaGFzaCI6InRuUFBxVU1tTWtpdjdJTWF1a0s4VmciLCJhdWQiOiI1MTQ0ODkxNzU3MzUtdmdnZHJpZjIwZmZ1aTRzcW01NWltbzhyYzI5MzNtZ24uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDk5MjQxMzcxNDczNzM4MDU3MjIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXpwIjoiNTE0NDg5MTc1NzM1LXZnZ2RyaWYyMGZmdWk0c3FtNTVpbW84cmMyOTMzbWduLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiZW1haWwiOiJwYXRyaWNrd2hhcmR5QGdtYWlsLmNvbSIsImlhdCI6MTQ2NTQwODAyOCwiZXhwIjoxNDY1NDExNjI4fQ.s7_F8FIvgq0hw0fywWMWviFAZ35t2D02I9uHyvDEqebSRCftOgmbOU1FbfhOAchNk7iF2PPmvBklrXNLn60-eUBGraloXnTZ85eULs-srRBWNIlooTULA5wgdE-1Dtj2YIj6jdE_5uFNbBPP_xmFicYKiqquuKiEwZfIgNdZKaFNXYXGWk-0aesRJLgYqtwHKmKCGrkdl4X4GbpbXMWsMjDB6yfbLr2EwVfbglTh7zXAXVLE8ddf_P-18YpQHQU42W6DcvqGRU8Nzzm7SELPIz-M0dzXbZVtWYJazCKH_dooXdVbwcLGeUtb2-GdNn8-5-dpeYcAkzrbncpUdBhkXw&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">       &quot;id_info&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">        {&quot;iss&quot;=&gt;&quot;accounts.google.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">         &quot;at_hash&quot;=&gt;&quot;tnPPqUMmMkiv7IMaukK8Vg&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">         &quot;aud&quot;=&gt;&quot;514489175735-vggdrif20ffui4sqm55imo8rc2933mgn.apps.googleusercontent.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">         &quot;sub&quot;=&gt;&quot;109924137147373805722&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">         &quot;email_verified&quot;=&gt;true,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">         &quot;azp&quot;=&gt;&quot;514489175735-vggdrif20ffui4sqm55imo8rc2933mgn.apps.googleusercontent.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">         &quot;email&quot;=&gt;&quot;patrickwhardy@gmail.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">         &quot;iat&quot;=&gt;1465408028,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">         &quot;exp&quot;=&gt;1465411628},</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">       &quot;raw_info&quot;=&gt;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">        {&quot;kind&quot;=&gt;&quot;plus#personOpenIdConnect&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">         &quot;gender&quot;=&gt;&quot;male&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">         &quot;sub&quot;=&gt;&quot;109924137147373805722&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">         &quot;name&quot;=&gt;&quot;Patrick Hardy&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">         &quot;given_name&quot;=&gt;&quot;Patrick&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">         &quot;family_name&quot;=&gt;&quot;Hardy&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">         &quot;profile&quot;=&gt;&quot;https://plus.google.com/109924137147373805722&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">         &quot;picture&quot;=&gt;&quot;https://lh3.googleusercontent.com/-877gHIubnP0/AAAAAAAAAAI/AAAAAAAAABY/KonHIUOAUVo/photo.jpg?sz=50&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">         &quot;email&quot;=&gt;&quot;patrickwhardy@gmail.com&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">         &quot;email_verified&quot;=&gt;&quot;true&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">         &quot;locale&quot;=&gt;&quot;en&quot;}}}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    # user = User.from_omniauth(auth_info)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">    # expect(user.uid).to eq(&quot;&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    # user.uid = auth.uid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    # user.provider = auth.provider</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    # user.name = auth.info.name</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    # user.oauth_token = auth.credentials.token</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">    # user.oauth_expires_at = Time.at(auth.credentials.expires_at)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">    # user.profile_image = auth.info.image</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"> end</code>
         </li>
       
     </ol>
