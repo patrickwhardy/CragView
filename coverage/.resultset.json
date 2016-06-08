@@ -1,44 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/features/user_logs_in_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/services/picasa_service_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/features/user_creates_crags_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -297,6 +270,47 @@
         1,
         null
       ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/features/user_logs_in_spec_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/services/picasa_service_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/services/picasa_service.rb": [
         1,
         1,
@@ -387,8 +401,18 @@
         null,
         null,
         null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
       ]
     },
-    "timestamp": 1465425425
+    "timestamp": 1465427086
   }
 }
