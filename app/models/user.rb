@@ -10,12 +10,12 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.profile_image = auth.info.image
     end
-    user = User.find_by(uid: auth[:uid])
-    user.update_panoramas
+    update_panoramas(auth[:uid])
   end
 
-  def update_panoramas
+  def self.update_panoramas(uid)
+    user = User.find_by(uid: uid)
     # untested - add condition to find unsaved panos
-    XMLParser.create_users_panoramas(self.uid) if self.panoramas == []
+    XMLParser.create_users_panoramas(uid) if user.panoramas == []
   end
 end

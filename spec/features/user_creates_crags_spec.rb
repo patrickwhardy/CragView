@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.feature "User can add a crag" do
   context "with their photospheres" do
     it "gets photospheres" do
-      # linter not working - so hard coding user #3
-      # user = User.find(3)
       user = create(:user)
       XMLParser.create_users_panoramas(user.uid)
       panorama = user.panoramas.last
@@ -22,11 +20,11 @@ RSpec.feature "User can add a crag" do
 
       click_on "Create Crag"
 
-      expect(current_path).to eq(crag_path(Crag.last))
+      expect(current_path).to eq(crags_path(Crag.last))
 
       expect(page).to have_content("Practice Rock")
       expect(page).to have_content("A great place to learn the ropes.")
-      expect(page).to have_content("Drive west of boulder until you see some big rocks.")
+      expect(page).to have_content("Drive west from Boulder until you see some big rocks.")
     end
   end
 end

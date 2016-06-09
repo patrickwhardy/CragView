@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get '/:user/dashboard', to: "users#show", as: :dashboard
 
-  resource :crags, only: [:new]
+  resource :crags, only: [:new, :create, :show]
 end
