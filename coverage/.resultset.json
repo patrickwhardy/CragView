@@ -12,12 +12,23 @@
         null,
         1,
         null,
+        1,
         null,
+        1,
         null,
+        0,
         null,
+        0,
+        0,
+        0,
         null,
+        0,
         null,
+        0,
         null,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -255,10 +266,25 @@
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/panoramas.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
-        null,
-        null,
-        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/user.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -464,21 +490,6 @@
         null,
         null
       ],
-      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/user.rb": [
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/controllers/application_controller.rb": [
         1,
         1,
@@ -497,6 +508,6 @@
         null
       ]
     },
-    "timestamp": 1465494798
+    "timestamp": 1465496165
   }
 }
