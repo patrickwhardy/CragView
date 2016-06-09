@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   get '/:user/dashboard', to: "users#show", as: :dashboard
+
+  resource :crags, only: [:new]
 end

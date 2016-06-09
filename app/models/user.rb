@@ -9,13 +9,13 @@ class User < ActiveRecord::Base
       user.oauth_token = auth.credentials.token
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.profile_image = auth.info.image
-      create_users_panoramas(auth.uid)
     end
+    user = User.find_by(uid: auth[:uid])
+    user.update_panoramas
   end
 
-  def create_users_panoramas(uid)
-    service = PicasaService.new
-    geo_albums = service.get_geo_album(uid)
-    geo_albums.each { |geo_album| Panorama.new(geo_album) }
+  def update_panoramas
+    # untested - add condition to find unsaved panos
+    XMLParser.create_users_panoramas(self.uid) if self.panoramas == []
   end
 end
