@@ -16,18 +16,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 
-  config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-    begin
-      DatabaseCleaner.start
-      # Test factories in spec/factories are working.
-      FactoryGirl.lint
-    ensure
-      DatabaseCleaner.clean
-    end
-  end
-
+  config.use_transactional_fixtures = true
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
