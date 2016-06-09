@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
+
+  get '/:user/dashboard', to: "users#show", as: :dashboard
+
+  resource :crags, only: [:new, :create, :show]
 end

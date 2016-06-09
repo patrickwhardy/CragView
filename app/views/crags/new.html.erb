@@ -1,0 +1,7 @@
+<%= form_for @crag do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_area :description, placeholder: "Description" %>
+  <%= f.text_area :directions, placeholder: "Directions" %>
+  <%= f.hidden_field :location, value: @location %>
+  <%= f.submit "Create Crag" %>
+<% end %>

@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: CragView_production
-  username: CragView
-  password: <%= ENV['CRAGVIEW_DATABASE_PASSWORD'] %>
