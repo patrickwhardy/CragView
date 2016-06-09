@@ -10,6 +10,13 @@
         1,
         1,
         null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -236,6 +243,35 @@
         null,
         null
       ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/crags.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/panoramas.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/routes.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/factories/users.rb": [
         1,
         1,
@@ -253,6 +289,8 @@
         1,
         null,
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -276,6 +314,44 @@
         null,
         null,
         null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/models/crag_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/crag.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/models/panorama_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/panorama.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/models/route_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/route.rb": [
+        1,
+        1,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/services/picasa_service_spec.rb": [
@@ -391,6 +467,7 @@
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/user.rb": [
         1,
         1,
+        1,
         0,
         0,
         0,
@@ -411,8 +488,15 @@
         0,
         null,
         null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1465427086
+    "timestamp": 1465494798
   }
 }
