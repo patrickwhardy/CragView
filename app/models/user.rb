@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
       user.profile_image = auth.info.image
     end
     update_panoramas(auth[:uid])
+    return User.find_by(uid: auth[:uid])
   end
 
   def self.update_panoramas(uid)
