@@ -23,6 +23,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'figaro'
 
+# Use 12factor for Heroku debugging
+gem 'rails_12factor', group: :production
+
+# Use Unicorn as the app server
+gem 'unicorn'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
