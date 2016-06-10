@@ -15,6 +15,6 @@ RSpec.feature "admin can delete a crag" do
       click_on("Delete")
     end
     # expect(page).not_to have_content table row ".crag-#{crag.id}"
-    expect(page).to have_content "#{crag.name} has been deleted"
+    expect(page).not_to have_content "#{crag.name}"
   end
 end

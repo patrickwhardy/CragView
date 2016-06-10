@@ -19,6 +19,11 @@ class CragsController < ApplicationController
     @crag = Crag.find(params["format"])
   end
 
+  def destroy
+    Crag.destroy(params["format"])
+    redirect_to request.referrer
+  end
+
   private
 
   def crag_params
