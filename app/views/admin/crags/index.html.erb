@@ -1,0 +1,7 @@
+<% @crags.each do |crag| %>
+  <tr class="crag-<%= crag.id %>">
+    <td><%= crag.name %></td>
+    <td><%= link_to "Delete", admin_crags_delete_path(crag) %></td>
+    <td><%= link %></td>
+  </tr>
+<% end %>

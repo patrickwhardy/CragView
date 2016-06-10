@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     # untested - add condition to find unsaved panos
     XMLParser.create_users_panoramas(uid) if user.panoramas == []
   end
+
+  def admin?
+    self.role == 1
+  end
 end

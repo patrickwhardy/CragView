@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get '/:user/dashboard', to: "users#show", as: :dashboard
 
   resource :crags, only: [:new, :create, :show]
+
+  namespace :admin do
+    resources :crags, only: [:index, :destroy]
+  end
 end
