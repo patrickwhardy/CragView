@@ -1,6 +1,5 @@
 <%= link_to "View All Crags", admin_crags_path(@user) if @user.admin? %>
 <% @user.panoramas.each do |panorama| %>
-  <!-- <%= link_to panorama.location, new_crags_path, location: panorama.location %><br> -->
   <%= link_to panorama.location, {:controller => "crags", :action => "new", :location => panorama.location } %><br>
   <%= image_tag(panorama.thumbnail) %><br>
 <% end %>

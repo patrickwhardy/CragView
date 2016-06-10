@@ -2,5 +2,6 @@
   <tr class="crag-<%= crag.id %>">
     <td><%= crag.name %></td>
     <td><%= link_to "Delete", crags_path(crag), method: :delete %></td>
+    <td><%= link_to "Edit", edit_admin_crag_path(crag) %></td>
   </tr>
 <% end %>

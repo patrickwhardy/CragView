@@ -10,9 +10,9 @@ Rails.application.routes.draw do
 
   get '/:user/dashboard', to: "users#show", as: :dashboard
 
-  resource :crags, only: [:new, :create, :show, :destroy]
+  resource :crags, only: [:new, :create, :show, :destroy, :update]
 
   namespace :admin do
-    resources :crags, only: [:index]
+    resources :crags, only: [:index, :edit]
   end
 end

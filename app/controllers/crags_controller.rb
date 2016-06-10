@@ -24,6 +24,16 @@ class CragsController < ApplicationController
     redirect_to request.referrer
   end
 
+  def update
+    @crag = Crag.find(params["crag"]["id"])
+    @crag.update(crag_params)
+    if @crag.save
+      redirect_to admin_crags_path(current_user)
+    else
+      flash[:error] = @crag.errors.full_messages.join(", ")
+    end
+  end
+
   private
 
   def crag_params
