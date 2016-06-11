@@ -1,14 +1,14 @@
 <nav class="navbar navbar-dark bg-inverse">
 
 	<div class="logo">
-		<h1>CragView</h1>
+		<h1><%= link_to "CragView", root_path %></h1>
 	</div>
 
 	<ul class="nav navbar-nav pull-xs-right">
 
-	  <li class="nav-item">
-	  	<%= dashboard_path(current_user) %>
-	  </li>
+    <li class="nav-item">
+      <%= link_to "Dashboard", (dashboard_path(current_user)) %>
+    </li>
 
 	  <li class="nav-item">
 			<% if current_user %>

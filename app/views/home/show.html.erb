@@ -1,1 +1,19 @@
 <%= render partial: "layouts/js_map" %>
+<% if @crags %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Crag Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @crags.each do |crag| %>
+        <tr>
+          <td> <%= crag.name %> </td>
+          <td> <%= crag.description %> </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% end %>
