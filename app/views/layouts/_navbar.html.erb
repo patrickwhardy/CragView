@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-inverse">
+
+	<div class="logo">
+		<h1>CragView</h1>
+	</div>
+
+	<ul class="nav navbar-nav pull-xs-right">
+
+	  <li class="nav-item">
+	  	<%= dashboard_path(current_user) %>
+	  </li>
+
+	  <li class="nav-item">
+			<% if current_user %>
+        Signed in as <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <% else %>
+        <%= link_to "Sign in with Google to add your Crag Views", "/auth/google_oauth2", id: "sign_in" %>
+      <% end %>
+		</li>
+	</ul>
+</nav>

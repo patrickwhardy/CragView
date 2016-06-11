@@ -9,8 +9,9 @@
     thePanorama = map.getStreetView();
 
     streetviewChangeListener = google.maps.event.addListener(thePanorama, 'visible_changed', function() {
-                console.log('visible_changed ');
-                console.log('streetview panorama position: ' + thePanorama.getPosition());
+                var location = thePanorama.getPosition();
+                console.log('streetview panorama position: ' + location);
+                $("")
       });
   }
 <% end %>
@@ -19,3 +20,5 @@
    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS'] %>&callback=initMap"
        async defer></script>
 </div>
+
+<input class="btn btn-default pull-right" id="create-crag" type="button" name="submit" value="Create Crag">
