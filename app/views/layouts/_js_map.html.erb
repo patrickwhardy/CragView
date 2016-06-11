@@ -5,6 +5,13 @@
       center: {lat: 44.540, lng: -78.546},
       zoom: 8
     });
+
+    thePanorama = map.getStreetView();
+
+    streetviewChangeListener = google.maps.event.addListener(thePanorama, 'visible_changed', function() {
+                console.log('visible_changed ');
+                console.log('streetview panorama position: ' + thePanorama.getPosition());
+      });
   }
 <% end %>
 
