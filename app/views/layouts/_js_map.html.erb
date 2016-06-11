@@ -9,6 +9,6 @@
 <% end %>
 
 <div id="map">
-   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS'] %>&callback=initMap"
        async defer></script>
 </div>
