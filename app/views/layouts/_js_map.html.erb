@@ -11,7 +11,6 @@
     streetviewChangeListener = google.maps.event.addListener(thePanorama, 'visible_changed', function() {
                 var location = thePanorama.getPosition();
                 console.log('streetview panorama position: ' + location);
-                $("")
       });
   }
 <% end %>
