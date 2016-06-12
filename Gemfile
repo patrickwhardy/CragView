@@ -28,6 +28,7 @@ gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server
 gem 'unicorn'
+gem 'responders'
 
 
 # Use ActiveModel has_secure_password

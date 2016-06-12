@@ -1,5 +1,16 @@
 <%= link_to "View All Crags", admin_crags_path(@user) if @user.admin? %>
+<div class="container well">
+<h1>Welcome <%= @user.name %> </h1>
+  <p>
+    <img src="<%= @user.profile_image %>" class="profile" height=100px width=100px >
+    Thanks for being a part of the CragView community! There are two ways to add panoramas to the CragView database.
+    <li>Browse Google Maps for StreetViews uploaded by any user <%= link_to "here", locator_path %>.</li>
+    or
+    <li>Select one of your panoramas from below</li>
+  </p>
+</div>
 <% @user.panoramas.each do |panorama| %>
-  <%= link_to panorama.location, {:controller => "crags", :action => "new", :location => panorama.location } %><br>
-  <%= image_tag(panorama.thumbnail) %><br>
+  <div class="well">
+    <p style="text-align:center;"><%= link_to image_tag(panorama.thumbnail), {:controller => "crags", :action => "new", :location => panorama.location } %><br></p>
+  </div>
 <% end %>

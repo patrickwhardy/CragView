@@ -12,8 +12,14 @@
   </head>
   <body>
     <%= render "layouts/navbar" %>
-    <div>
+
+    <% flash.each do |type, message| %>
+      <div class="panel panel-default">
+        <div class="panel-body"><%= "#{message}" %></div>
+      </div>
+    <% end %>
+
+    <div class="ajax-flash"></div>
     <%= yield %>
-    </div>
   </body>
 </html>

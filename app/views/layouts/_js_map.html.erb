@@ -13,6 +13,14 @@
                 console.log('streetview panorama position: ' + location);
       });
   }
+
+  $.ajax({
+			 method: "POST",
+			 url: "/api/v1/crags",
+			 dataType: "JSON",
+			 data: {crag: {location: "45.5969,-82.0473", name: "New Name"}},
+			 success: $('.ajax-flash').html("<div class='alert alert-success'><h4>It worked!</h4></div>")
+		 })
 <% end %>
 
 <div id="map">
