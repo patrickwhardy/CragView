@@ -1,4 +1,12 @@
+<div class="crag-info">
+<div class="well">
+  <%= @crag.name %><br>
+</div>
 <%= render partial: "layouts/view", locals: {location: @crag.location} %><br>
-<%= @crag.name %><br>
-<%= @crag.description %><br>
-<%= @crag.directions %><br>
+  <div class="well container">
+    Description: <%= @crag.description %><br>
+  </div>
+  <div class="well container">
+    Directions: <%= @crag.directions %><br>
+  </div>
+</div>

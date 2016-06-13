@@ -2,6 +2,7 @@ class Api::V1::CragsController < ApplicationController
   respond_to :json
 
   def create
+    binding.pry
     respond_with :api, :v1, Crag.create(crag_params)
   end
 

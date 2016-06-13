@@ -1,4 +1,5 @@
 <%= javascript_tag do %>
+  var view_location;
   function initMap() {
     var mapDiv = document.getElementById('map');
     var map = new google.maps.Map(mapDiv, {
@@ -6,27 +7,33 @@
       zoom: 8
     });
 
-    thePanorama = map.getStreetView();
+    var thePanorama = map.getStreetView();
 
     streetviewChangeListener = google.maps.event.addListener(thePanorama, 'visible_changed', function() {
-                var location = thePanorama.getPosition();
+                view_location = thePanorama.getPosition();
                 console.log('streetview panorama position: ' + location);
       });
   }
 
   $(document).ready(function(){
     $("#create-crag").on("click", function() {
+      console.log(view_location);
+      console.log(getData());
       console.log("create crag clicked");
       var description = $("Description").val();
         $.ajax({
           method: "POST",
           url: "/api/v1/crags",
           dataType: "JSON",
-          data: {crag: {location: "45.5969,-82.0473", name: "New Name", description: description}},
+          data: {crag: getData()},
           success: $('.ajax-flash').html("<div class='alert alert-success'><h4>It worked!</h4></div>")
         })
     })
   })
+
+  var getData = function() {
+    return {location: view_location.lat() + "," + view_location.lng(), description: $('#Description').val(), name: $('#Name').val(), directions: $('#Directions').val()}
+  }
 
 <% end %>
 
