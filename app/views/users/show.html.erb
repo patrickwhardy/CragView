@@ -1,5 +1,5 @@
 <%= link_to "View All Crags", admin_crags_path(@user) if @user.admin? %>
-<div class="container well">
+<div class="container well dashboard-panel">
 <h1>Welcome <%= @user.name %> </h1>
   <p>
     <img src="<%= @user.profile_image %>" class="profile" height=100px width=100px >
@@ -10,7 +10,7 @@
   </p>
 </div>
 <% @user.panoramas.each do |panorama| %>
-  <div class="well">
+  <div class="container well">
     <p style="text-align:center;"><%= link_to image_tag(panorama.thumbnail), {:controller => "crags", :action => "new", :location => panorama.location }, class: "thumbnail-#{panorama.id}" %><br></p>
   </div>
 <% end %>
