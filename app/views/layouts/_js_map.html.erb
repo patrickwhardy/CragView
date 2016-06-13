@@ -35,5 +35,9 @@
        async defer></script>
 </div>
 
-<%= text_area_tag "Description"  %>
-<button id="create-crag" name="create-crag" class="btn btn-default pull-right">Create Crag</button>
+<div class="container map-form">
+  <%= text_area_tag "Name", "Name"  %>
+  <%= text_area_tag "Description", "Description"  %>
+  <%= text_area_tag "Directions", "Directions"  %>
+  <button id="create-crag" name="create-crag" class="btn btn-default pull-right">Create Crag</button>
+</div>
