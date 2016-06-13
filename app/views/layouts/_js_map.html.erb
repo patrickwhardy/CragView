@@ -13,17 +13,18 @@
                 console.log('streetview panorama position: ' + location);
       });
   }
-  $.ajax({
-    method: "POST",
-    url: "/api/v1/crags",
-    dataType: "JSON",
-    data: {crag: {location: "45.5969,-82.0473", name: "New Name"}},
-    success: $('.ajax-flash').html("<div class='alert alert-success'><h4>It worked!</h4></div>")
-  })
 
   $(document).ready(function(){
     $("#create-crag").on("click", function() {
       console.log("create crag clicked");
+      var description = $("Description").val();
+        $.ajax({
+          method: "POST",
+          url: "/api/v1/crags",
+          dataType: "JSON",
+          data: {crag: {location: "45.5969,-82.0473", name: "New Name", description: description}},
+          success: $('.ajax-flash').html("<div class='alert alert-success'><h4>It worked!</h4></div>")
+        })
     })
   })
 
@@ -34,4 +35,5 @@
        async defer></script>
 </div>
 
+<%= text_area_tag "Description"  %>
 <button id="create-crag" name="create-crag" class="btn btn-default pull-right">Create Crag</button>

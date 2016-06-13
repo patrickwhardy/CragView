@@ -11,6 +11,6 @@
 </div>
 <% @user.panoramas.each do |panorama| %>
   <div class="well">
-    <p style="text-align:center;"><%= link_to image_tag(panorama.thumbnail), {:controller => "crags", :action => "new", :location => panorama.location } %><br></p>
+    <p style="text-align:center;"><%= link_to image_tag(panorama.thumbnail), {:controller => "crags", :action => "new", :location => panorama.location }, class: "thumbnail-#{panorama.id}" %><br></p>
   </div>
 <% end %>

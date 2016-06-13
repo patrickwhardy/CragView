@@ -6,7 +6,7 @@ RSpec.feature "user can view all crags" do
 
     visit "/"
 
-    click_on "View all Crags"
+    click_on "View All Crag Views"
 
     expect(current_path).to eq("/crags")
 
