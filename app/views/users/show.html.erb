@@ -1,4 +1,7 @@
-<%= link_to "View All Crags", admin_crags_path(@user) if @user.admin? %>
+<% if @user.admin? %>
+  <%= link_to "View All Crags", admin_crags_path(@user) %>
+  <%= link_to "View All Users", admin_users_path(@user) %>
+<% end %>
 <div class="container well dashboard-panel">
 <h1>Welcome <%= @user.name %> </h1>
   <p>
