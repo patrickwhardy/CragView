@@ -6,10 +6,17 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'capybara/rails'
 require 'rspec/rails'
+require 'database_cleaner'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.javascript_driver = :chrome
 
 RSpec.configure do |config|
   config.mock_with :mocha

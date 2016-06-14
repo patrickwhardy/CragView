@@ -25,7 +25,7 @@ RSpec.feature "User can add a crag" do
       expect(page).to have_content("A great place to learn the ropes.")
     end
 
-    xit "using locator" do
+    it "using locator", js: true do
       #not filling in forms or clicking create crag buttion or erroring?
       user = create(:user)
 
@@ -40,6 +40,8 @@ RSpec.feature "User can add a crag" do
       fill_in "Description", with: "New Crag Description"
       fill_in "Directions", with: "New Crag Directions"
       click_button("Create Crag")
+
+      expect(page).to have_content("You Successfully Created a New Crag!")
 
       visit(crags_path)
       expect(page).to have_content("New Crag Name")
