@@ -17,16 +17,13 @@
 
   $(document).ready(function(){
     $("#create-crag").on("click", function() {
-      console.log(view_location);
-      console.log(getData());
-      console.log("create crag clicked");
       var description = $("Description").val();
         $.ajax({
           method: "POST",
           url: "/api/v1/crags",
           dataType: "JSON",
           data: {crag: getData()},
-          success: $('.ajax-flash').html("<div class='alert alert-success'><h4>It worked!</h4></div>")
+          success: $('.ajax-flash').html("<div class='alert alert-success'><h4>You Successfully Created a New Crag!</h4></div>")
         })
     })
   })
