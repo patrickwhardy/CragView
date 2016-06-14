@@ -1,0 +1,53 @@
+#map {
+  width: 100%;
+  height: 320px;
+  text-align: center;
+}
+
+#panorama {
+  img-align: middle;
+}
+
+#profile {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+#home {
+  text-align: center;
+}
+
+.landing {
+  background-image: asset-url("hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.map-form {
+  padding-top: 20px;
+}
+
+textarea {
+  width: 28%;
+  height: 150px;
+}
+
+.search {
+  width: 200px;
+}
+
+.dashboard-panel {
+  text-align: center;
+}
+
+.view-container {
+  text-align: center;
+}
+
+.new-crag-form {
+  text-align: center;
+}
+
+.crag-info {
+  text-align: center;
+}
