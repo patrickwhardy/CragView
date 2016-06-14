@@ -1,0 +1,12 @@
+ <h1><%= "Edit #{@crag.name}" %></h1>
+
+<%= form_for @crag, url: crag_path, method: :patch do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name, placeholder: "#{@crag.name}" %>
+  <%= f.label "Description" %>
+  <%= f.text_area :description, placeholder: "#{@crag.description}" %>
+  <%= f.label "Directions" %>
+  <%= f.text_area :directions, placeholder: "#{@crag.directions}" %>
+  <%= f.hidden_field :id, value: @crag.id %>
+  <%= f.submit "Update Crag" %>
+<% end %>
