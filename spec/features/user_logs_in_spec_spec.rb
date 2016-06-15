@@ -10,5 +10,7 @@ RSpec.feature "User can log in" do
 
     expect(current_path).to eq(dashboard_path(user))
     expect(page).to have_content(user.name)
+
+    expect(page).to have_content("Signed in as #{user.name}!")
   end
 end

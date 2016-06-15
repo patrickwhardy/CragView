@@ -10,13 +10,14 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.profile_image = auth.info.image
     end
-    find_panoramas(auth[:uid])
+    refresh_panoramas(auth[:uid])
     return User.find_by(uid: auth[:uid])
   end
 
-  def self.find_panoramas(uid)
+  def self.refresh_panoramas(uid)
     user = User.find_by(uid: uid)
-    XMLParser.create_users_panoramas(uid) if user.panoramas == []
+    user.panoramas = []
+    XMLParser.create_users_panoramas(uid)
   end
 
   def admin?
