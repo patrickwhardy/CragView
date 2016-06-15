@@ -1,6 +1,10 @@
 class CragsController < ApplicationController
   def index
-    @crags = Crag.all
+    if params["search"]
+      @crags = Crag.where('lower(name) = ?', params["search"].downcase)
+    else
+      @crags = Crag.all
+    end
   end
 
   def new
@@ -36,6 +40,10 @@ class CragsController < ApplicationController
     else
       flash[:error] = @crag.errors.full_messages.join(", ")
     end
+  end
+
+  def search
+    binding.pry
   end
 
   private
