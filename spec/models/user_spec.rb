@@ -46,4 +46,22 @@ RSpec.describe User, type: :model do
     expect(user.profile_image).to eq("https://lh3.googleusercontent.com/-877gHIubnP0/AAAAAAAAAAI/AAAAAAAAABY/KonHIUOAUVo/photo.jpg")
     expect(user.role).to eq(0)
   end
+
+  it "refreshes panoramas" do
+    user = create(:user)
+
+    User.refresh_panoramas(user.uid)
+
+    panorama = user.panoramas.first
+    expect(user.panoramas.count).to eq(5)
+    expect(panorama.location).to eq("39.7319304,-105.0271554")
+    expect(panorama.thumbnail).to eq("https://lh3.googleusercontent.com/-3OLUYCnhvYk/V1IGvaXfBmI/AAAAAAAAAGg/VDXpfOXvHwsXdgByCYmVpiF_eqreLLlvwCHM/2016-06-03.jpg")
+  end
+
+  it "checks admin" do
+    user = create(:user)
+    user.role = 1
+
+    expect(user.admin?).to eq(true)
+  end
 end
