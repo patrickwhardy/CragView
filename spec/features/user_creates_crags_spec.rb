@@ -40,5 +40,19 @@ RSpec.feature "User can add a crag" do
       fill_in "Directions", with: "New Crag Directions"
       click_button("Create Crag")
     end
+
+    it "rejects when data is insufficient" do
+      panorama = create(:panorama)
+      user = panorama.user
+      ApplicationController.any_instance.stubs(:current_user).returns(user)
+
+      visit(dashboard_path(user))
+      find(".thumbnail-#{panorama.id}").click
+
+      click_on "Create Crag"
+
+      expect(current_path).to eq(new_crag_path)
+      expect(page).to have_content("Name can't be blank, Description can't be blank, Directions can't be blank")
+    end
   end
 end
