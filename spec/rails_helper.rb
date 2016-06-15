@@ -38,3 +38,18 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+OmniAuth.config.test_mode = true
+
+def mock_auth_hash
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    "uid" => "109924137147373805722",
+    "provider" => "google_oauth2",
+    "credentials" => { "expires_at" => "04/03/2019",
+    "oauth_token" => "ya29.Ci8AAwZpwsYj3OXO-Y3k3GZriFNshS6xNurw5wwafFrGrEMm1fQOeexX54KNfKrGcA"
+      },
+    "info" => {"name" => "Patrick Hardy",
+      "image" => "https://lh3.googleusercontent.com/-877gHIubnP0/AAAAAAAAAAI/AAAAAAAAABY/KonHIUOAUVo/photo.jpg"
+      }
+    })
+end
