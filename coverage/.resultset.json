@@ -704,6 +704,9 @@
         null,
         null
       ],
+      "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/requests/post_crag_spec.rb": [
+
+      ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/services/picasa_service_spec.rb": [
         1,
         1,
@@ -811,6 +814,10 @@
         1,
         1,
         2,
+        0,
+        null,
+        2,
+        null,
         null,
         null,
         1,
@@ -846,6 +853,10 @@
         null,
         0,
         null,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
@@ -892,6 +903,6 @@
         null
       ]
     },
-    "timestamp": 1466021054
+    "timestamp": 1466025771
   }
 }

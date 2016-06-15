@@ -13,8 +13,9 @@
   border-radius: 50%;
 }
 
-#home {
+.home {
   text-align: center;
+  padding-top: 200px;
 }
 
 .landing {
@@ -49,5 +50,13 @@ textarea {
 }
 
 .crag-info {
+  text-align: center;
+}
+
+.crag-table {
+  overflow-x: auto;
+}
+
+.panorama-thumbnail {
   text-align: center;
 }
