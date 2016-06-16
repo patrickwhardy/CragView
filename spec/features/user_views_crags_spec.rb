@@ -10,6 +10,9 @@ RSpec.feature "user can view all crags" do
 
     expect(current_path).to eq("/crags")
 
+    expect(page).to have_content(crag.name)
+    expect(page).to have_content(crag.description)
+
     click_on(crag.name)
 
     expect(current_path).to eq("/crags/#{crag.id}")

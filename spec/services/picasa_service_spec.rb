@@ -1,6 +1,6 @@
 require "rails_helper"
 describe PicasaService do
-  xit "returns album data" do
+  it "returns album data" do
     user_id = "109924137147373805722" #uid for patrickwhardy returned from OAuth
     service = PicasaService.new
     album_data = service.get_albums(user_id)
@@ -9,14 +9,14 @@ describe PicasaService do
     expect(album_data["feed"].class).to eq(Hash)
   end
 
-  xit "returns Geo album id" do
+  it "returns Geo album id" do
     user_id = "109924137147373805722"
     service = PicasaService.new
 
     expect(service.geo_album_id(user_id)).to eq("6292099039613053713")
   end
 
-  xit "returns Geo Panorama Album data" do
+  it "returns Geo Panorama Album data" do
     user_id = "109924137147373805722"
     service = PicasaService.new
 
