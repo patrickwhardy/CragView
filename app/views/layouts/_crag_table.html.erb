@@ -8,11 +8,13 @@
           </tr>
         </thead>
         <tbody>
-          <% @crags.each do |crag| %>
-          <tr>
-            <td> <%= link_to crag.name, crag_path(crag) %> </td>
-            <td> <%= crag.description %> </td>
-          </tr>
+          <% cache("crags list") do %>
+            <% @crags.each do |crag| %>
+            <tr>
+              <td> <%= link_to crag.name, crag_path(crag) %> </td>
+              <td> <%= crag.description %> </td>
+            </tr>
+            <% end %>
           <% end %>
         </tbody>
       </table>

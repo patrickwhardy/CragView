@@ -550,6 +550,11 @@
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/crag.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/models/panorama_spec.rb": [
@@ -568,6 +573,11 @@
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/panorama.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/spec/models/user_spec.rb": [
@@ -903,6 +913,6 @@
         null
       ]
     },
-    "timestamp": 1466027325
+    "timestamp": 1466090079
   }
 }
