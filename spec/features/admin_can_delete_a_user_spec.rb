@@ -2,7 +2,6 @@ require "rails_helper"
 
 RSpec.feature "admin can delete a user" do
   scenario "They delete from admin user index" do
-    #maybe faker is not rotating through names w/o internet
     admin = create(:user)
     admin.role = 1
     ApplicationController.any_instance.stubs(:current_user).returns(admin)

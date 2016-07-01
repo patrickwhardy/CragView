@@ -57,7 +57,7 @@
         null,
         null,
         1,
-        23,
+        24,
         null,
         null
       ],
@@ -124,11 +124,6 @@
         1,
         9,
         null,
-        null,
-        1,
-        1,
-        1,
-        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/controllers/admin/crags_controller.rb": [
@@ -168,7 +163,7 @@
         1,
         null,
         1,
-        10,
+        11,
         null,
         null
       ],
@@ -176,6 +171,11 @@
         1,
         1,
         2,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -259,13 +259,8 @@
         0,
         0,
         0
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/route.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1467401116
+    "timestamp": 1467401532
   }
 }

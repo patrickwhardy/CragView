@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "home#show"
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -7,16 +9,13 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
   resource :locator, only: [:show]
 
-  root to: "home#show"
-
   get '/:user/dashboard', to: "users#show", as: :dashboard
 
-  resources :users, only: [:destroy, :update]
   resources :crags, only: [:index, :new, :create, :show]
 
   namespace :admin do
     resources :crags, only: [:index, :edit, :destroy, :update]
-    resources :users, only: [:index, :edit]
+    resources :users, only: [:index, :edit, :destroy]
   end
   namespace :api do
     namespace :v1 do
