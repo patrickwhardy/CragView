@@ -8,10 +8,13 @@ class PicasaService
   end
 
   def geo_album_id(user_id)
-    geo_entry = get_albums(user_id)["feed"]["entry"].find do |entry|
-      entry["title"] == "Geo Panoramas" if entry.class == Hash
+    albums = get_albums(user_id)["feed"]["entry"]
+    if albums
+      geo_entry = albums.find do |entry|
+        entry["title"] == "Geo Panoramas" if entry.class == Hash
+      end
+      geo_entry["id"][0].split("/").last if geo_entry
     end
-    geo_entry["id"][0].split("/").last if geo_entry
   end
 
   def get_album_data(user_id, album_id)
