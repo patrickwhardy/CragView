@@ -4,11 +4,13 @@ class XMLParser
     service = PicasaService.new
     panoramas = service.get_geo_album(uid)
 
-    panoramas.each do |panorama_data|
-      user.panoramas << Panorama.create(
-      location: XMLParser.format_location(panorama_data["where"]["Point"]["pos"]),
-      thumbnail: panorama_data["content"]["src"]
-      )
+    if panoramas
+      panoramas.each do |panorama_data|
+        user.panoramas << Panorama.create(
+        location: XMLParser.format_location(panorama_data["where"]["Point"]["pos"]),
+        thumbnail: panorama_data["content"]["src"]
+        )
+      end
     end
   end
 

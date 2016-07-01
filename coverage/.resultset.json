@@ -64,15 +64,17 @@
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/models/xml_parser.rb": [
         1,
         1,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
         null,
+        6,
         5,
         null,
         null,
         null,
         25,
+        null,
         null,
         null,
         null,
@@ -84,18 +86,18 @@
       "/Users/patrickwhardy/Turing/3module/projects/CragView/app/services/picasa_service.rb": [
         1,
         1,
-        8,
+        9,
+        null,
+        null,
+        1,
+        9,
         null,
         null,
         1,
         8,
+        25,
         null,
-        null,
-        1,
-        7,
-        7,
-        null,
-        7,
+        8,
         null,
         null,
         1,
@@ -104,8 +106,8 @@
         null,
         null,
         1,
-        5,
-        5,
+        6,
+        6,
         null,
         null
       ],
@@ -261,6 +263,6 @@
         0
       ]
     },
-    "timestamp": 1467401532
+    "timestamp": 1467404482
   }
 }
