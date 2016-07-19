@@ -1,10 +1,6 @@
 class CragsController < ApplicationController
   def index
-    if params["search"]
-      @crags = Crag.where('lower(name) = ?', params["search"].downcase)
-    else
-      @crags = Crag.all
-    end
+    @crags = Crag.all
   end
 
   def new
