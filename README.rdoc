@@ -1,11 +1,9 @@
 Hosted live here: http://cragview.herokuapp.com/
 
-CragView was built by Patrick Hardy for a "personal project" in Module 3 at The Turing School.
-It is an rails-based open-source database of climbing areas documented with Google Streetview.
+CragView is a rails-based open-source database of climbing areas documented with Google Streetview.
 The project utilizes Omniauth2 to find users' Google+ account information and
 PicasaWebService API to locate panoramas that they have uploaded to Google Maps.
 
 The "locator" feature allows users to drop a "Pegman" to any Streetview in Google's database.
-This tool sends an jquery and ajax to post new crags with an internal api.
 
 Crag entries are displayed with their respective Streetviews and helpful info about climbing here.
